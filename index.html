@@ -1,9 +1,66 @@
+<!-- site Reservia projet 2 openclassroom-->
+
 <!DOCTYPE html>
 <html lang="fr">
-  <head>
-    <title>Test</title>
-  </head>
-  <body>
-    <h1>Essai</h1>
-  </body>
+    <head>
+        <meta charset="utf-8"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        <link rel="stylesheet" href="monstyle.css"/>
+        <link rel="icon" type="image/svg" href="images/logo/Reservia.svg"/>
+
+        <!-- google font regular 400 Ralway-->
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Raleway&display=swap" rel="stylesheet">
+        <!-- and italic-->
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Raleway:ital@1&display=swap" rel="stylesheet"> 
+        <!-- font awesome CDN-->
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.1/css/all.css" integrity="sha384-vp86vTRFVJgpjF9jiIGPEEqYqlDwgyBgEF109VFjmqGmIY/Y4HV4d3Gp2irVfcrp" crossorigin="anonymous">
+
+
+        <title>Reservia</title>
+    </head>
+    <body>
+        <header>
+            <img src="images/logo/Reservia.svg" alt="logo reservia"/>
+            <nav>
+                <ul>
+                    <li><a href="#">Hebergements</a></li>
+                    <li><a href="#">Activites</a></li>
+                    <li id="inscription"><a href="#">S'inscrire</a></li>
+                </ul>
+            </nav>
+        </header>
+        <main>
+            <h1>Trouvez votre hebergement pour des vacances de reves</h1>
+            <p>En plein centre ville ou en pleine nature</p>
+            <div id="recherche">
+                <i class="fas fa-map-marker-alt"></i>
+                <input type="text" size="12" maxlength="60" placeholder="Ville"/>
+                <button type="button"><span>Rechercher</span><i class="fas fa-search"></i></button>
+            </div>
+            <section>
+                <h2>Filtres</h2>
+                <div id="filter">
+                    <div class="filter-item">
+                        <i class="fas fa-money-bill-wave"></i>
+                        <span>Economique</span>
+                    </div>
+                    <div class="filter-item">
+                        <i class="fas fa-child"></i>
+                        <span>Familliale</span>
+                    </div>
+                    <div class="filter-item">
+                        <i class="fas fa-heart"></i>
+                        <span>Romantique</span>
+                    </div>
+                    <div class="filter-item">
+                        <i class="fas fa-dog"></i>
+                        <span>Animaux autorises</span>
+                    </div>
+                </div>
+            </section>
+        </main>
+        <footer></footer>
+    </body>
 </html>

@@ -1,0 +1,282 @@
+
+
+
+*{
+    margin: 0px;
+    padding: 0px;
+    
+}
+
+body{
+    font-family: Ralway, Arial, Helvetica, sans-serif;
+    background-color: white;
+
+}
+
+
+
+            /*--------------------------- HEADER   monile first  */
+
+header{
+    display: flex;
+    flex-direction: column;
+    padding-top: 20px;
+}
+
+header img{
+    width: 110px;
+    height: auto;
+    margin-left: 18px;
+}
+
+header ul{
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    margin-top: 10px;
+
+}
+
+header li{
+
+    text-align: center;
+    flex-grow: 1;
+    padding: 15px 0;
+}
+
+#inscription{
+    position: absolute;
+    right: 15px;
+    top: 25px;
+    
+}
+
+#inscription a{
+    font-weight: bold;
+    color: #0065fc;
+}
+
+#inscription a:hover{
+    border-bottom: none;
+    margin-right: 4px;
+    margin-top: 3px;
+}
+
+header a{
+    display: block;
+    text-decoration: none;
+    padding-bottom: 10px;
+    color: black;
+}
+
+header a:hover{
+    border-bottom: #0065fc 3px solid;
+    color: #0065fc;
+}
+
+/*-------------------------------------   Search---*/
+
+main{
+    padding: 0 15px;
+}
+
+
+h1{
+    margin-top: 5px;
+    margin-bottom: 10px;
+    font-size: 1.4em;
+}
+
+p{
+    margin-bottom: 10px;
+    font-size: 1em;
+    font-weight: 100;
+}
+
+#recherche{
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+
+    margin-top: 40px;
+
+ 
+}
+
+#recherche input{
+    border: none;
+    border-top: 1px solid #F2F2F2;
+    border-bottom: 1px solid #F2F2F2;
+    padding: 16px;
+
+    display: block;
+    font-weight: bold;
+    font-size: 1.2em;
+}
+
+.fa-map-marker-alt{
+    padding: 16px;
+    text-align: center;
+    background-color: #F2F2F2;
+    border: 1px solid #F2F2F2;
+    border-radius: 15px 0px 0px 15px;
+}
+
+#recherche button span{
+    display: none;
+}
+
+.fa-search{
+    padding: 16px;
+    text-align: center;
+    color: white;
+    
+}
+
+#recherche button{
+    font-size: 100%;
+    margin: 0;
+    padding: 0;
+    background-color: #0065fc;
+    border: 1px solid #0065fc;
+    border-radius: 15px;
+    cursor: pointer;
+}
+
+
+/*-------------------------------------- Filter   */
+
+section h2{
+    margin-top: 20px;
+    
+}
+
+#filter{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.filter-item{
+    margin: 10px 0;
+}
+
+.filter-item i{
+    padding: 15px;
+    background-color: #deebff;
+    color: #0065fc;
+    border-radius: 50%;
+}
+
+.filter-item span{
+    padding: 13px;
+    padding-left: 22px;
+    border-top: 3px solid #F2F2F2;
+    border-right: 3px solid #F2F2F2;
+    border-bottom: 3px solid #F2F2F2;
+    border-radius: 0 35px 35px 0;
+
+    position: relative;
+    right: 25px;
+
+}
+
+
+
+/*--------------------------------------------- Tab and landscape  */
+
+@media screen and (min-width:480px){
+    header{
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: flex-start;
+        margin-top: 4px;
+        padding-top: 0px;
+
+    }
+    header img{
+        padding-top: 40px;
+    }
+
+    header ul{
+        margin-top: 0px;
+    }
+
+    #inscription{
+        position: initial;
+        font-weight: 400;
+    } 
+
+    header li{
+        padding: 0px 30px;
+    }
+
+    #inscription a:hover{
+        border-bottom: none;
+        margin-right: 0px;
+        margin-top: 0px;
+    }
+
+    header a{
+        padding-bottom: 0px;
+        padding-top: 40px;
+    }
+    header a:hover{
+        border-bottom: none;
+        border-top: 3px solid #0065fc;
+    }
+    /*--------------------------------------------------------*/
+    main{
+        margin: 30px 20px;
+
+    }
+
+
+    /*--------------------------------------  Search-------------*/
+
+    #recherche button span{
+        display: inline;
+    }
+
+    #recherche button i{
+        display: none;
+    }
+
+    #recherche button{
+        color: white;
+        padding: 16px 5px;
+        border-radius: 0px 15px 15px 0px;
+    }
+}
+
+
+/*-------------------------------------------------------- PC   */
+
+@media screen and (min-width:1200px){
+
+
+    header{
+        margin: 4px 50px ;
+    
+    }
+    header li{
+        padding: 0px 60px;
+    }
+/*-------------------------------------------------------*/
+    main{
+        margin: 30px 50px;
+    }
+    /*------------------------------------------------- filter  */
+    section{
+        display: flex;
+        flex-direction: row;
+        margin-top: 25px;
+    }
+    section h2{
+        margin-right: 20px;
+    }
+}
+
+
+
