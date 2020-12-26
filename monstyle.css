@@ -76,7 +76,7 @@ header a:hover{
 
 /*-------------------------------------   Search---*/
 
-main{
+article{
     padding: 0 15px;
 }
 
@@ -210,7 +210,71 @@ section h2{
     background-color: inherit;
     font-style: italic;
 }
+/*-------------------------------- POPULAIRES   */
+#populaires{
+    background-color: #F2F2F2;
+    border-radius: 25px;
 
+    display: flex;
+    flex-direction: column;
+}
+
+#title-pop{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 20px 0;
+}
+
+#title-pop h2{
+    font-size: 1.2em;
+}
+
+.card-pop{
+    width: 335px;
+    height: 144px;
+
+    display: flex;
+    flex-direction: row;
+
+    background-color: white;
+    padding: 6px;
+    margin: 10px;
+    border-radius: 10px;
+}
+
+.img-pop{
+    width: 126px;
+    height: 136px;
+    overflow: hidden;
+
+}
+
+.img-pop img{
+    height: 136px;
+    width: auto;
+}
+.content-pop{
+    margin: 15px;
+    font-size: 0.9em;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+/* colors for stars  */
+.blue{
+    color: #0065fc;
+}
+
+.grey{
+    color: #F2F2F2;
+}
+
+
+.card-pop div{
+
+}
 
 /*--------------------------------------------- Tab and landscape  */
 
