@@ -165,9 +165,18 @@ section h2{
     margin: 10px 0;
 }
 
+
 .filter-item:hover{
     transform: scale(1.2);
 }
+
+.filter-item:active{
+    transform: scale(1.2);
+}
+
+
+
+
 
 .filter-item i{
     padding: 15px;
