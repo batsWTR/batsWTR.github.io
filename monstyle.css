@@ -365,6 +365,7 @@ section h2{
 
 #plus{
     font-size: 1.2em;
+    margin: 20px 15px;
 }
 
 
@@ -565,9 +566,8 @@ footer a{
 
     #activites-container{
         flex-direction: row;
-        justify-content: space-between;
+        justify-content: space-around;
         flex-wrap: wrap;
-        align-items: flex-end;
     
     }
 
