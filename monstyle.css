@@ -427,7 +427,7 @@ section h2{
 /*-------------------------------------------------------- Footer        */
 footer{
     background-color: #F2F2F2;
-    padding: 20px 15px;
+    padding: 20px 50px;
 
     display: flex;
     flex-direction: column;
