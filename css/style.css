@@ -289,7 +289,8 @@
   font-size: 2rem;
   display: flex;
   flex-direction: row;
-  translate: 4rem;
+  position: relative;
+  left: 4rem;
   transition: transform 1s;
 }
 .menu-card__right:hover {
