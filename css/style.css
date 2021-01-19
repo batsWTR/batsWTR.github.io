@@ -273,7 +273,7 @@
   padding-top: 1.5rem;
   overflow: hidden;
   white-space: nowrap;
-  text-overflow: ellipsis ellipsis;
+  text-overflow: ellipsis;
 }
 .menu-card__left p {
   margin: 0;
@@ -281,7 +281,7 @@
   font-size: 1.6rem;
   overflow: hidden;
   white-space: nowrap;
-  text-overflow: ellipsis ellipsis;
+  text-overflow: ellipsis;
 }
 .menu-card__right {
   cursor: pointer;
