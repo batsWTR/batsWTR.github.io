@@ -15,9 +15,9 @@
 }
 .loading i {
   color: #9356DC;
-  font-size: 50px;
+  font-size: 8rem;
   padding: 3rem;
-  opacity: 1;
+  animation: drink 3s;
 }
 
 @keyframes loader {
@@ -29,6 +29,14 @@
   }
   100% {
     transform: scale(1);
+  }
+}
+@keyframes drink {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
   }
 }
 .but {
