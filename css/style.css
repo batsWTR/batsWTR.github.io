@@ -1,4 +1,36 @@
 @charset "UTF-8";
+.loading {
+  background-color: #eeeeee;
+  opacity: 0.5;
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+  transform: scale(0);
+  transform-origin: 50% 50%;
+  animation: loader 3s backwards;
+}
+.loading i {
+  color: #9356DC;
+  font-size: 50px;
+  padding: 3rem;
+  opacity: 1;
+}
+
+@keyframes loader {
+  0% {
+    transform: scale(0);
+  }
+  10% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
 .but {
   padding: 1.5rem 2rem;
   background: linear-gradient(170deg, #FF79DA, #9356DC);
