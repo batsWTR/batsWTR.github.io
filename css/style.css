@@ -1,14 +1,17 @@
 @charset "UTF-8";
 .loading {
   background-color: #eeeeee;
-  opacity: 0.5;
+  opacity: 0.8;
+  z-index: 2;
   position: absolute;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  height: 100%;
-  width: 100%;
+  box-sizing: border-box;
+  height: 100vh;
+  width: 100vw;
+  max-width: 1200px;
   transform: scale(0);
   transform-origin: 50% 50%;
   animation: loader 3s backwards;
@@ -40,6 +43,7 @@
   }
 }
 .but {
+  position: relative;
   padding: 1.5rem 2rem;
   background: linear-gradient(170deg, #FF79DA, #9356DC);
   box-shadow: -1rem 0.8rem 0.8rem #c8c8c8;
@@ -50,10 +54,26 @@
   font-size: 1.4rem;
   text-decoration: none;
   opacity: 1;
-  transition: opacity 0.4s ease-in;
+  transition: opacity 0.3s ease-in;
+}
+.but::after {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  left: 0;
+  top: 0;
+  border-radius: 2.5rem;
+  width: 100%;
+  height: 100%;
+  box-shadow: -1rem 1.2rem 1.2rem #bbbbbb;
+  opacity: 0;
+  transition: opacity 0.3s ease-in;
 }
 .but:hover {
   opacity: 0.8;
+}
+.but:hover::after {
+  opacity: 1;
 }
 
 .nouveau::after {
@@ -79,7 +99,7 @@
 .underline {
   border-bottom: 0.3rem solid #99E2D0;
   display: inline-block;
-  width: 2.5rem;
+  width: 3rem;
   font-size: 2rem;
 }
 
@@ -111,6 +131,14 @@
   transition: transform 0.8s;
 }
 
+@keyframes menu-animation {
+  0% {
+    transform: scaleY(0);
+  }
+  100% {
+    transform: scaleY(1);
+  }
+}
 .header {
   background-color: white;
   text-align: center;
@@ -128,7 +156,7 @@
   display: inline;
   float: left;
   font-size: 2rem;
-  padding-top: 1rem;
+  padding: 1rem;
 }
 .header--arrow a {
   color: black;
@@ -225,12 +253,14 @@
 }
 .card-fn__logo {
   color: #7c7c7c;
+  margin: 0 1px;
 }
 .card-fn__logo--color  {
   color: #9356DC;
 }
 .card-fn__text {
   margin-left: 2.5rem;
+  padding-right: 1rem;
 }
 .card-fn--bg {
   background-color: #eee5f9;
@@ -348,13 +378,14 @@
 }
 .menu-card__left {
   overflow: hidden;
+  cursor: pointer;
+  flex-grow: 1;
+  transition: margin-right 1s;
 }
 .menu-card__left h4 {
   margin: 0;
   padding-top: 1.5rem;
   overflow: hidden;
-  white-space: nowrap;
-  text-overflow: ellipsis;
 }
 .menu-card__left p {
   margin: 0;
@@ -365,32 +396,51 @@
   white-space: nowrap;
   text-overflow: ellipsis;
 }
+.menu-card__left:hover + .menu-card__right {
+  transform: translateX(-5rem);
+}
+.menu-card__left:hover {
+  margin-right: 5rem;
+}
 .menu-card__right {
-  cursor: pointer;
-  width: 8rem;
   font-size: 2rem;
   display: flex;
   flex-direction: row;
-  position: relative;
-  left: 4rem;
+  margin-left: 0.5rem;
+  margin-right: -5rem;
   transition: transform 1s;
-}
-.menu-card__right:hover {
-  transform: translateX(-4rem);
 }
 .menu-card__price {
   height: 100%;
-  width: 4rem;
+  width: 5rem;
   padding-top: 50%;
   font-weight: 900;
 }
 .menu-card__tick {
   color: white;
   height: 100%;
-  width: 4rem;
+  width: 5rem;
   text-align: center;
   padding-top: 25%;
   background-color: #99E2D0;
+}
+
+.anim-entrees {
+  transform-origin: top;
+  transform: scaleY(0);
+  animation: menu-animation 3s forwards 1s;
+}
+
+.anim-plats {
+  transform-origin: top;
+  transform: scaleY(0);
+  animation: menu-animation 3s forwards 2s;
+}
+
+.anim-desserts {
+  transform-origin: top;
+  transform: scaleY(0);
+  animation: menu-animation 3s forwards 3s;
 }
 
 .footer-menu {
