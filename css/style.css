@@ -1,4 +1,3 @@
-@charset "UTF-8";
 .loading {
   background-color: #eeeeee;
   opacity: 0.8;
@@ -139,6 +138,18 @@
     transform: scaleY(1);
   }
 }
+@keyframes anim-tick {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+.just-black {
+  color: black;
+}
+
 .header {
   background-color: white;
   text-align: center;
@@ -240,6 +251,13 @@
   box-shadow: -1rem 0.8rem 0.8rem #e2e2e2;
   border-radius: 2.5rem;
   font-size: 1.4rem;
+  cursor: pointer;
+}
+.card-fn:hover > .card-fn__logo {
+  color: #9356DC;
+}
+.card-fn:hover {
+  background-color: #eee5f9;
 }
 .card-fn__order {
   color: white;
@@ -255,15 +273,9 @@
   color: #7c7c7c;
   margin: 0 1px;
 }
-.card-fn__logo--color  {
-  color: #9356DC;
-}
 .card-fn__text {
   margin-left: 2.5rem;
   padding-right: 1rem;
-}
-.card-fn--bg {
-  background-color: #eee5f9;
 }
 
 .restaurants {
@@ -353,7 +365,7 @@
   justify-content: space-between;
   align-items: center;
   padding-top: 2rem;
-  margin-right: 1.5rem;
+  margin-right: 1rem;
   font-family: "Shrikhand", cursive;
   font-size: 2rem;
 }
@@ -374,11 +386,19 @@
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  align-items: stretch;
+  cursor: pointer;
+}
+.menu-card:hover > .menu-card__right {
+  transform: translateX(-5rem);
+}
+.menu-card:hover > .menu-card__right i {
+  animation: anim-tick 1s;
+}
+.menu-card:hover > .menu-card__left {
+  margin-right: 5rem;
 }
 .menu-card__left {
   overflow: hidden;
-  cursor: pointer;
   flex-grow: 1;
   transition: margin-right 1s;
 }
@@ -386,6 +406,8 @@
   margin: 0;
   padding-top: 1.5rem;
   overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
 }
 .menu-card__left p {
   margin: 0;
@@ -396,14 +418,9 @@
   white-space: nowrap;
   text-overflow: ellipsis;
 }
-.menu-card__left:hover + .menu-card__right {
-  transform: translateX(-5rem);
-}
-.menu-card__left:hover {
-  margin-right: 5rem;
-}
 .menu-card__right {
   font-size: 2rem;
+  flex-shrink: 0;
   display: flex;
   flex-direction: row;
   margin-left: 0.5rem;
@@ -413,15 +430,16 @@
 .menu-card__price {
   height: 100%;
   width: 5rem;
-  padding-top: 50%;
+  padding-top: 27%;
   font-weight: 900;
 }
 .menu-card__tick {
   color: white;
   height: 100%;
   width: 5rem;
-  text-align: center;
-  padding-top: 25%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   background-color: #99E2D0;
 }
 
